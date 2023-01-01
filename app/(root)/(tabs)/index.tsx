@@ -2,6 +2,7 @@ import { router, useLocalSearchParams } from "expo-router";
 import React, { useEffect } from "react";
 import {
   ActivityIndicator,
+  Button,
   FlatList,
   Image,
   Text,
@@ -12,16 +13,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import icons from "@/constants/icons";
 
-// import { Card, FeaturedCard } from "@/components/Cards";
-// import Filters from "@/components/Filters";
-// import NoResults from "@/components/NoResults";
-// import Search from "@/components/Search";
-
 import { Card, FeaturedCard } from "@/components/Cards";
 import Filters from "@/components/Filters";
+import NoResults from "@/components/NoResults";
 import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/globalProvider";
+import seed from "@/lib/seed";
 import { useAppwrite } from "@/lib/useAppwrite";
 
 const Home = () => {
@@ -79,8 +77,8 @@ const Home = () => {
           loading ? (
             <ActivityIndicator size="large" className="text-primary-300 mt-5" />
           ) : (
-            // <NoResults /> 
-            null
+            <NoResults /> 
+          
           )
         }
         ListHeaderComponent={() => (
@@ -122,6 +120,7 @@ const Home = () => {
                 <ActivityIndicator size="large" className="text-primary-300" />
               ) : !latestProperties || latestProperties.length === 0 ? (
                 <NoResults />
+             
               ) : (
                 <FlatList
                   data={latestProperties}
@@ -139,7 +138,7 @@ const Home = () => {
               )}
             </View>
 
-            {/* <Button title="seed" onPress={seed} /> */}
+            <Button title="seed" onPress={seed} />
 
             <View className="mt-5">
               <View className="flex flex-row items-center justify-between">
