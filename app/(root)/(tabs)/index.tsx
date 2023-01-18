@@ -9,7 +9,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>welcome to realestate app</Text>
+      <Text className="text-primary-300  text-3xl  font-rubik-bold">welcome to realestate app</Text>
     </View>
   );
 }
