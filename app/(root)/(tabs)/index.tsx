@@ -15,6 +15,7 @@ import icons from "@/constants/icons";
 
 import { Card, FeaturedCard } from "@/components/Cards";
 import Filters from "@/components/Filters";
+
 import NoResults from "@/components/NoResults";
 import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";

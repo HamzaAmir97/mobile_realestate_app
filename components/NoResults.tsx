@@ -1,11 +1,12 @@
-import images from '@/constants/images'
-import React from 'react'
-import { Image, Text, View } from 'react-native'
+import React from "react";
+import { Image, Text, View } from "react-native";
+
+import images from "@/constants/images";
 
 const NoResults = () => {
   return (
     <View className="flex items-center my-5">
-       <Image
+      <Image
         source={images.noResult}
         className="w-11/12 h-80"
         resizeMode="contain"
@@ -17,7 +18,7 @@ const NoResults = () => {
         We could not find any result
       </Text>
     </View>
-  )
-}
+  );
+};
 
-export default NoResults
+export default NoResults;
