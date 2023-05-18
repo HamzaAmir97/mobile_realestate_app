@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Alert,
   Image,
   ScrollView,
   Text,
@@ -10,7 +11,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import icons from "@/constants/icons";
 import images from "@/constants/images";
-// import { login } from "@/lib/appwrite";
+import { login } from "@/lib/appwrite";
 // import { useGlobalContext } from "@/lib/global-provider";
 
 const Auth = () => {
@@ -19,12 +20,12 @@ const Auth = () => {
   // if (!loading && isLogged) return <Redirect href="/" />;
 
   const handleLogin = async () => {
-    // const result = await login();
-    // if (result) {
-    //   refetch();
-    // } else {
-    //   Alert.alert("Error", "Failed to login");
-    // }
+    const result = await login();
+    if (result) {
+      // refetch();
+    } else {
+      Alert.alert("Error", "Failed to login");
+    }
   };
 
   return (
