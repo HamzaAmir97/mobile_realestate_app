@@ -1,4 +1,3 @@
-import { Link } from "expo-router";
 import { Text, View } from "react-native";
 
 export default function Index() {
@@ -11,8 +10,7 @@ export default function Index() {
       }}
     >
       <Text className="text-danger  text-3xl  font-rubik-bold">welcome to realestate app</Text>
-     <Link href="/sign-in">Sign In</Link>
-     <Link href="/profile">Profile</Link>
+   
     </View>
   );
 }
