@@ -17,6 +17,7 @@ import icons from "@/constants/icons";
 // import NoResults from "@/components/NoResults";
 // import Search from "@/components/Search";
 
+import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/globalProvider";
 import { useAppwrite } from "@/lib/useAppwrite";
@@ -101,7 +102,7 @@ const Home = () => {
               <Image source={icons.bell} className="size-6" />
             </View>
 
-            {/* <Search /> */}
+            <Search />
 
             <View className="my-5">
               <View className="flex flex-row items-center justify-between">
