@@ -17,6 +17,8 @@ import icons from "@/constants/icons";
 // import NoResults from "@/components/NoResults";
 // import Search from "@/components/Search";
 
+import { Card } from "@/components/Cards";
+import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/globalProvider";
@@ -62,11 +64,11 @@ const Home = () => {
         data={properties}
         numColumns={2}
 
-        renderItem={() => null}
+        // renderItem={() => null}
 
-        // renderItem={({ item }) => (
-        //   <Card item={item} onPress={() => handleCardPress(item.$id)} />
-        // )}
+        renderItem={({ item }) => (
+          <Card item={item} onPress={() => handleCardPress(item.$id)} />
+        )}
 
 
         keyExtractor={(item) => item.$id}
@@ -151,7 +153,7 @@ const Home = () => {
                 </TouchableOpacity>
               </View>
 
-              {/* <Filters /> */}
+              <Filters />
             </View>
           </View>
         )}
