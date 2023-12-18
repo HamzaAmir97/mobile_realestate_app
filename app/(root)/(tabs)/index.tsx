@@ -17,7 +17,7 @@ import icons from "@/constants/icons";
 // import NoResults from "@/components/NoResults";
 // import Search from "@/components/Search";
 
-import { Card } from "@/components/Cards";
+import { Card, FeaturedCard } from "@/components/Cards";
 import Filters from "@/components/Filters";
 import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
@@ -118,7 +118,7 @@ const Home = () => {
                 </TouchableOpacity>
               </View>
 
-              {/* {latestPropertiesLoading ? (
+              {latestPropertiesLoading ? (
                 <ActivityIndicator size="large" className="text-primary-300" />
               ) : !latestProperties || latestProperties.length === 0 ? (
                 <NoResults />
@@ -136,7 +136,7 @@ const Home = () => {
                   showsHorizontalScrollIndicator={false}
                   contentContainerClassName="flex gap-5 mt-5"
                 />
-              )} */}
+              )}
             </View>
 
             {/* <Button title="seed" onPress={seed} /> */}
