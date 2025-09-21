@@ -2,12 +2,11 @@ import { router, useLocalSearchParams } from "expo-router";
 import React, { useEffect } from "react";
 import {
   ActivityIndicator,
-  Button,
   FlatList,
   Image,
   Text,
   TouchableOpacity,
-  View,
+  View
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -20,7 +19,6 @@ import NoResults from "@/components/NoResults";
 import Search from "@/components/Search";
 import { getLatestProperties, getProperties } from "@/lib/appwrite";
 import { useGlobalContext } from "@/lib/globalProvider";
-import seed from "@/lib/seed";
 import { useAppwrite } from "@/lib/useAppwrite";
 
 const Home = () => {
@@ -139,7 +137,7 @@ const Home = () => {
               )}
             </View>
 
-            <Button title="seed" onPress={seed} />
+            {/* <Button title="seed" onPress={seed} /> */}
 
             <View className="mt-5">
               <View className="flex flex-row items-center justify-between">
